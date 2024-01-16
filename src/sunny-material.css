@@ -1,0 +1,354 @@
+.mat-form-field {
+  position: relative;
+  display: block;
+  min-height: 60px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  font-size: 16px;
+}
+.mat-flex-field{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+  border: solid var(--field-border) 2px;
+  background-color: var(--bg-section);
+  color: var(--font);
+  border-radius: 5px;
+}
+.mat-label {
+  position: absolute;
+  z-index: 1;
+  margin-left: 10px;
+  margin-top: 0;
+  pointer-events: none;
+  white-space: nowrap;
+  padding: 0 5px 0 2px;
+  background-color: var(--bg-section);
+  color: var(--color-wipedout);
+  max-width: 90%;
+  overflow: hidden;
+  animation: delevate forwards .4s;
+}
+
+.mat-label.elevate {
+  animation: elevate forwards .4s;
+}
+
+.mat-input, 
+.mat-select .mat-select-value-container,
+.mat-select .mat-select-search-input {
+  width: calc(100% - 28px);
+  width: -webkit-calc(100% - 28px);
+  width: -moz-calc(100% - 28px);
+  width: -o-calc(100% - 28px);
+  font-size: inherit;
+  padding: 14px 14px 14px;
+  min-height: 1rem;
+  border-radius: 5px;
+  color: inherit;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.mat-checkbox.checked::before, .mat-icon::before {
+  font-family: 'Material Symbols Outlined';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+}
+
+.mat-icon::before {
+  content: attr(maticon);
+}
+
+.mat-form-field.ng-invalid .mat-flex-field {
+  border-color: var(--warn)
+}
+
+.mat-suffix,.mat-prefix {
+  position: relative;
+  color: inherit;
+  margin: 0 8px;
+}
+.label-with-prefix {
+  margin-left: 38px
+}
+.mat-suffix {
+  margin-left: 8px;
+}
+.mat-prefix {
+  margin-right: 8px;
+}
+
+.mat-form-field.ng-invalid, 
+.mat-expansion-panel.ng-invalid {
+  animation: bounce none 0.3s;
+  -o-animation-iteration-count: 1;
+}
+
+.mat-form-field.ng-invalid .mat-label {
+  color: var(--warn)
+}
+
+.mat-button {
+  display: inline-block;
+  height: 46px;
+  padding: 0 32px;
+  border: none;
+  border-radius: 23px;
+  outline: none;
+  text-align: center;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.mat-button[disabled] {
+  background-color: var(--light-gray);
+}
+
+.mat-icon-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  border: none;
+  outline: none;
+  height: 1.5rem;
+  font-size: 18px;
+  background-color: transparent;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.mat-flat-button.primary {
+  color: #ffffff;
+  background-color: var(--primary);
+}
+
+.mat-stroked-button {
+  font-weight: 600;
+  box-sizing: border-box;
+  border-style: solid;
+  border-width: 2px;
+  background-color: var(--stroked-bg);
+  border-color: var(--stroke); 
+}
+
+.mat-stroked-button:hover{
+  background-color: var(--stroked-hover);
+}
+
+.mat-stroked-button:active{
+  background-color: var(--stroked-active);
+}
+
+.mat-flat-button.accent{
+  background-color: var(--accent);
+  color: var(--font);
+}
+.mat-checkbox {
+  cursor: pointer;
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+}
+.mat-checkbox::before {
+  width: 16px;
+  height: 16px;
+  border: solid 2px var(--stroke);
+  border-radius: 4px;
+  content: "";
+}
+.mat-checkbox.checked::before {
+  background-color: var(--primary);
+  color: var(--font-reverse);
+  content: "\f88b";
+  font-size: inherit;
+}
+.mat-checkbox.null::before {
+  content: "\f88a ";
+  font-size: inherit;
+}
+
+.mat-grid {
+  border-collapse: collapse;
+  width: 100%
+}
+.mat-grid td, .mat-grid th {
+  padding: 5px;
+  border: solid 1px black;
+}
+
+.mat-sort *[mat-sort-header] {
+  cursor: pointer;
+}
+.mat-sort *[mat-sort-header]:hover::after {
+  content: '\2B61'
+}
+.mat-sort *[mat-sort-header][mat-sort-header-desc]:hover::after {
+  content: '\2B63'
+}
+
+.mat-radio-group {
+  display: inline-block
+}
+
+.radio-button {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  margin-bottom: 2px;
+}
+
+.mat-radio-button {
+  display: inline-block;
+  border: solid 2px var(--stroke);
+  border-radius: 16px;
+  width: 16px;
+  height: 16px;
+}
+
+.mat-radio-group.multiple .mat-radio-button {
+  border-radius: 4px;
+}
+
+.radio-button.active .mat-radio-button {
+  border-color: var(--accent);
+}
+
+.radio-button.active .dot-radio-button{
+  background-color: var(--accent);
+}
+
+.mat-radio-group.active .mat-radio-button {
+  border-color: var(--primary);
+}
+.radio-button.active .mat-radio-button::after {
+  content: '\0020';
+  position: relative;
+  display: block;
+  background-color: var(--stroke);
+  width: 8px;
+  height: 8px;
+  border-radius: 4px;
+  margin: -19px 4px;
+}
+
+.mat-radio-group.multiple .radio-button.active .mat-radio-button::after {
+  border-radius: 2px;
+}
+
+.radio-button.active .mat-radio-button::before {
+  content: '\0020';
+  position: relative;
+  display: block;
+  margin-left: -7px;
+  margin-top: -7px;
+  border-radius: 100%;
+  background-color: var(--primary);
+  transform: translate(-50%, -50%);
+  height: 30px;
+  width: 30px;
+  animation: rippleshow forwards .3s;
+}
+.mat-select-text-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0;
+  width: 100%;
+  cursor: pointer;
+}
+.mat-select {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  outline: none;
+}
+
+.mat-input, 
+.mat-select .mat-select-value-container,
+.mat-select .mat-select-search-input {
+  width: calc(100% - 28px);
+  width: -webkit-calc(100% - 28px);
+  width: -moz-calc(100% - 28px);
+  width: -o-calc(100% - 28px);
+  font-size: inherit;
+  padding: 14px 14px 14px;
+  min-height: 1rem;
+  border-radius: 5px;
+  color: inherit;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.mat-select .mat-select-search-input {
+  border-bottom: solid var(--stroke) 1px;
+  border-radius: 0
+}
+.mat-select-combobox {
+  position: absolute;
+  z-index: 999;
+  height: 0;
+  overflow: auto;
+  width: inherit;
+  border: solid var(--stroke) 2px;
+  margin-left: -2px;
+  background-color: var(--section);
+  visibility: hidden;
+  transition: height .5s;
+}
+.mat-select-combobox.mat-slide-down {
+  visibility: visible;
+  height: auto;
+}
+.mat-select-bg {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
+  z-index: 999;
+}
+.mat-option {
+  display: flex;
+  flex-direction: row;
+  width: inherit;
+  padding: 8px;
+  cursor: pointer;
+}
+.mat-option.selected {
+  background-color: var(--hover);
+}
+.mat-option:hover {
+  background-color: var(--hover);
+}
+.mat-option:active {
+  background-color: #f0f0f0
+}
+
+.mat-step {
+  display: block;
+  height: 0;
+  visibility: hidden;
+  overflow: hidden;
+}
+.mat-step.active {
+  visibility: visible;
+  transition: all .5s;
+  height: auto;
+  overflow: visible;
+}

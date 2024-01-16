@@ -1,0 +1,129 @@
+@keyframes ripple {
+  0% {
+    transform-origin: center;
+    transform: scale(0, 0);
+    opacity: .5;
+  }
+  100% {
+    transform-origin: center;
+    transform: scale(1, 1);
+    opacity: 0;
+  }
+}
+
+@keyframes rippleshow {
+  0% {
+    transform-origin: center;
+    transform: scale(0, 0);
+    opacity: 0;
+  }
+  100% {
+    transform-origin: center;
+    transform: scale(1, 1);
+    opacity: .2;
+  }
+}
+
+@keyframes elevate {
+  from {
+    transform: translateY(0);
+    font-size: 14px
+  }
+  to {
+    transform: translateY(-24px);
+    font-size: 12px
+  }
+}
+
+@keyframes delevate {
+  from {
+    transform: translateY(-24px);
+    font-size: 12px
+  }
+    
+  to {
+    transform: translateY(0);
+    font-size: 14px
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateX(0px)
+  }
+  37% {
+    transform: translateX(5px)
+  }
+  55% {
+    transform: translateX(-5px)
+  }
+  73% {
+    transform: translateX(4px)
+  }
+  82% {
+    transform: translateX(-4px)
+  }
+  91% {
+    transform: translateX(2px)
+  }
+  96% {
+    transform: translateX(-2px)
+  }
+  100% {
+    transform: translateX(none)
+  }
+}
+
+@keyframes hide {
+  from {
+    transform: scale(1, 1);
+  }
+  to {
+    transform: scale(0, 0);
+  }
+}
+
+@keyframes show {
+  from {
+    transform: scale(0, 0);
+  }
+  to {
+    transform: scale(1, 1);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0)
+  }
+  100% {
+    transform: rotate(180deg)
+  }
+}
+
+@keyframes rotate-back {
+  0% {
+    transform: rotate(180deg)
+  }
+  100% {
+    transform: rotate(0)
+  }
+}
+
+@keyframes slide-up {
+  0% {
+    height: 100%;
+  }
+  100% {
+    height: 0%;
+  }
+}
+
+@keyframes slide-down {
+  0% {
+    height: 0%;
+  }
+  100% {
+    height: 100%;
+  }
+}

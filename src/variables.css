@@ -1,0 +1,16 @@
+:root {
+  --section: #ffffff;
+  --primary: #222222;
+  --secondary: #3B3B3D;
+  --hover: #f5f5f5;
+
+  --warn: rgb(207, 43, 43);
+  --shadow: rgba(0,0,0,.1);
+  --font: #333333;
+  --font-weak: #4e4d5f;
+  --field-border: #4e4d5f;
+  --font-reverse: #ebecee;
+  --stroke: #000000;
+  --light-stroke: #dddddd;
+  --bg-section: #ffffff;
+}
